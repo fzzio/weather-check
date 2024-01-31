@@ -12,10 +12,12 @@ const updateWeatherData = (data) => {
 </script>
 
 <template>
-  <main>
-    <WeatherForm @weatherData="updateWeatherData" />
-    <WeatherDetails :weatherData="weatherData" />
-  </main>
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
+      <WeatherForm @weatherData="updateWeatherData" />
+      <WeatherDetails :weatherData="weatherData" />
+    </div>
+  </div>
 </template>
 
 <style scoped>

@@ -20,12 +20,12 @@ const getTime = (timestamp: number) => {
 </script>
 
 <template>
-  <div v-if="weatherData">
-    <h2>{{ weatherData.name }}</h2>
-    <p>Time: {{ getTime(weatherData.dt) }}</p>
-    <p>Temperature: {{ weatherData.main.temp }}°C</p>
-    <p>Humidity: {{ weatherData.main.humidity }}%</p>
-    <p>Description: {{ weatherData.weather[0].description }}</p>
+  <div v-if="weatherData" class="bg-gray-200 p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4">{{ weatherData.name }}</h2>
+    <p class="text-sm">Time: {{ getTime(weatherData.dt) }}</p>
+    <p class="text-lg font-bold mt-2">Temperature: {{ weatherData.main.temp }}°C</p>
+    <p class="text-lg font-bold mt-2">Humidity: {{ weatherData.main.humidity }}%</p>
+    <p class="text-base mt-2">Description: {{ weatherData.weather[0].description }}</p>
   </div>
 </template>
 
