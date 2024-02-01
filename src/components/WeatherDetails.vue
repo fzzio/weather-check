@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const props = defineProps(['weatherData']);
+import MapLayer from './MapLayer.vue';
 
 interface WeatherData {
   name: string;
@@ -25,10 +26,11 @@ const getTime = (timestamp: number) => {
     <p class="text-sm">Time: {{ getTime(weatherData.dt) }}</p>
     <p class="text-lg font-bold mt-2">Temperature: {{ weatherData.main.temp }}°C</p>
     <p class="text-lg font-bold mt-2">Humidity: {{ weatherData.main.humidity }}%</p>
-    <p class="text-base mt-2">Description: {{ weatherData.weather[0].description }}</p>
+    <p class="text-base mt-2 mb-2">Description: {{ weatherData.weather[0].description }}</p>
+
+    <MapLayer :coordinates="[weatherData.coord.lon, weatherData.coord.lat]" />
   </div>
 </template>
 
 <style scoped>
-/* Add your styling here */
 </style>
