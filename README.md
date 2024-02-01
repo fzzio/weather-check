@@ -8,13 +8,16 @@ This template should help get you started developing with Vue 3 in Vite.
 
 
 
-## Project Setup
+## 1.- Project Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## 2.- Set the API Key
+For https://openweathermap.org/ set the .env variable `VITE_OPEN_WEATHER_MAP_API_KEY`
+
+## 3.- Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
